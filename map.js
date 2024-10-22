@@ -1,15 +1,20 @@
-const studentGrades = {
-    John: 85,
-    Anna: 92,
-    Bob: 75
-};
+const animalMap = new Map();
 
-console.log(studentGrades['Anna']);
 
-console.log('John' in studentGrades);
+animalMap.set('Lion', 5);
+animalMap.set('Elephant', 12);
+animalMap.set('Tiger', 8);
 
-delete studentGrades['Bob'];
 
-Object.entries(studentGrades).forEach(([key, value]) => {
+console.log(animalMap.get('Elephant')); // In ra: 12
+
+
+console.log(animalMap.has('Lion')); // In ra: true
+
+animalMap.delete('Tiger');
+
+console.log(animalMap.has('Tiger')); // In ra: false
+
+animalMap.forEach((value, key) => {
     console.log(`${key}: ${value}`);
 });

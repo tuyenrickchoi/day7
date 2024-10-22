@@ -1,16 +1,17 @@
-const uniqueNumbers = new Set();
+const animalSet = new Set();
 
-uniqueNumbers.add(1);
-uniqueNumbers.add(2);
-uniqueNumbers.add(3);
-uniqueNumbers.add(1);
 
-console.log(uniqueNumbers.size);
+animalSet.add('Lion');
+animalSet.add('Elephant');
+animalSet.add('Tiger');
+animalSet.add('Lion'); // Thêm "Lion" lần nữa, nhưng Set chỉ chứa các phần tử duy nhất
 
-console.log(uniqueNumbers.has(2));
+console.log(animalSet.size); // In ra: 3
 
-uniqueNumbers.delete(3);
+console.log(animalSet.has('Elephant')); // In ra: true
 
-uniqueNumbers.forEach((value) => {
-    console.log(value);
+animalSet.delete('Tiger');
+
+animalSet.forEach((animal) => {
+    console.log(animal);
 });
